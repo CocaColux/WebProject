@@ -13,7 +13,7 @@ CREATE TABLE Users(
 
 CREATE TABLE Chores(
    Id_Chores SERIAL PRIMARY KEY,
-   Chore_Name VARCHAR(250) NOT NULL,
+   Chore_Name VARCHAR(250),
    Descr VARCHAR(350),
    username VARCHAR(50) UNIQUE NOT NULL,
    room_name VARCHAR(50) NOT NULL,

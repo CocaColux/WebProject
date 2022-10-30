@@ -2,7 +2,6 @@ const bar =   document.getElementById('bar');
 const close = document.getElementById('close')
 const nav =   document.getElementById('navbar');
 const userloged="danny-grn";
-var room_name;
 var errorsignin=false;
 
 if (bar) {
@@ -49,12 +48,13 @@ const executeFunction1 = () => {
 const executeFunction2 = () => {
   getseechores();
 };
-
 const executeFunction3 = () => {
-  getCreationChore();
+  const room_name=kitchen();
+  alert(room_name);
+  getCreationChore(room_name);
 }
 const kitchen = () => {
-  room_name = "kitchen";
+  return "kitchen";
 }
 const getlogin=() =>{
   var pword = document.getElementById("pword").value;
@@ -98,7 +98,7 @@ const getRead = () => {
   }
 };
 
-const getCreationChore = () => {
+const getCreationChore = (room_name) => {
   var chore_name = document.getElementById("ChoreName").value;
   var descr = document.getElementById("Description").value;
 
